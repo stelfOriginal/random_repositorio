@@ -1,0 +1,20 @@
+{
+    "name": "alejandro/_plantilla",
+    "description": "",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "alejandro",
+            "email": "lstelf32@gmail.com"
+        }
+    ],
+    "autoload": {
+        
+        "psr-4": {
+            "models\\":"models/"
+        }
+    },
+
+
+    "require": {}
