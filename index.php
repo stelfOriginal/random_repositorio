@@ -22,6 +22,30 @@ $nombres =
 ];
 
 
+
+
+echo '<pre>';
+print_r($nombres);
+echo '</pre>';
+
+
+// zona de pruebas
+if( isset($_POST['personas']) && isset($_POST['trabajos']) ) {
+
+    // Variable para la cantidad de personas
+    $cantidad = $_POST['personas'];
+    $habilidad = $_POST['trabajos'];
+ 
+    // Imprimir la lista de personas en el nuevo equipo
+    foreach($nombres as $nombres => $valor) {
+        if ($habilidad == $valor) {
+            echo  'esta persona es:'.''. $nombres .' ';
+        }
+    }
+ }
+
+
+
 ?>
 
 <!-- HTML 5 -->
@@ -45,19 +69,21 @@ $nombres =
     </header>
     <!-- section -->
 
-<form action="index2.php">
+<form action="index.php" method="post" name="formulario">
     
 <label for="">Cantidad de personas</label>
-    <select>
+    <select name="personas">
+    <option selected="true" disabled="disabled">0</option>
   <option value="1">1</option>
   <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-</select>
+  <!-- <option value="3">3</option>
+  <option value="4">4</option> -->
+</select><br><br>
 
 
 <label for="">Puesto de trabajo</label>
-<select>
+<select name="trabajos" >
+<option selected="true" disabled="disabled">seleccione</option>
   <option value="HTML5">HTML5</option>
   <option value="CSS3">CSS3</option>
   <option value="Javascript">Javascript</option>
@@ -67,18 +93,10 @@ $nombres =
   <option value="Sass/Less">Sass/Less</option>
   <option value="Laravel">Laravel</option>
 
-</select>
+</select><br><br>
 <input type="submit" value="Enviar">
     <!-- footer -->
     </form>
-
-
-<?php
-echo '<pre>';
-print_r($nombres);
-echo '</pre>';
-
-?>
 
     <footer>
     
