@@ -1,6 +1,25 @@
-<!-- PHP 7 -->
+
+
 
 <?php
+
+$nombres = 
+["jorge"  =>'HTML5',
+ "Julia" =>'CSS3',
+  "Jose" =>'Javascript' , 
+  "Mateo" =>'Json/XML' ,
+   "Jaume" =>'Python', 
+   "Petro" =>'Java', 
+   "Alejandro" =>'Sass/Less', 
+   "Fran" =>'Laravel',
+   "Adri" =>'HTML5',
+   "Lolo" =>'CSS3',
+   "Cristian" =>'Javascript',
+   "Jordi" =>'Json/XML',
+   "Luis" =>'Python',
+   "David" =>'Java',
+   "Tony" =>'Laravel'
+];
 
 
 ?>
@@ -42,7 +61,7 @@
   <option value="HTML5">HTML5</option>
   <option value="CSS3">CSS3</option>
   <option value="Javascript">Javascript</option>
-  <option value=" Json/XML"> Json/XML</option>
+  <option value="Json/XML"> Json/XML</option>
   <option value="Python">Python</option>
   <option value="Java">Java</option>
   <option value="Sass/Less">Sass/Less</option>
@@ -52,6 +71,15 @@
 <input type="submit" value="Enviar">
     <!-- footer -->
     </form>
+
+
+<?php
+echo '<pre>';
+print_r($nombres);
+echo '</pre>';
+
+?>
+
     <footer>
     
     </footer>
